@@ -1,0 +1,13 @@
+//Embedded program producing continuous pulses with duration of 2 secs and duty cucle of 25%
+int highTime = 500; //time where amplitude is high (25% * 2 sec = 0.5 secs)
+int lowTime  =1500; //time where amplitude is low
+int outputPin =13; 
+void setup(){
+    pinMode(outputPin,OUTPUT); 
+   }  
+void loop(){
+   digitalWrite(outputPin,HIGH);//Output is set to high 
+   delay(highTime); // wait 
+   digitalWrite(outputPin,LOW); //Output is set to low
+   delay(lowTime); // wait 
+   }
