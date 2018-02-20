@@ -1,7 +1,7 @@
 //Embedded program producing continuous pulses with duration of 2 secs and duty cucle of 25%
-int highTime = 500; //time where amplitude is high (25% * 2 sec = 0.5 secs)
-int lowTime  =1500; //time where amplitude is low
-int outputPin =13; 
+int highTime = 500; //time where amplitude is high (25% * 2 sec = 0.5 sec)
+int lowTime  =1500; //time where amplitude is low (75% * 2sec =1.5 sec)
+int outputPin =13; //initializing output pin
 void setup(){
     pinMode(outputPin,OUTPUT); 
    }  
@@ -11,3 +11,48 @@ void loop(){
    digitalWrite(outputPin,LOW); //Output is set to low
    delay(lowTime); // wait 
    }
+   
+   
+//Embedded program that show a bouncing light between 4 leds ,with bouncing delay 1 sec
+#define LED01 4 
+#define LED02 5
+#define LED03 6
+#define LED04 7
+
+void setup()
+{
+  pinMode(LED01, OUTPUT); // digital pin is output
+  pinMode(LED02, OUTPUT); // digital pin is output
+  pinMode(LED03, OUTPUT); // digital pin is output
+  pinMode(LED04, OUTPUT); // digital pin is output
+}
+
+void loop()
+{
+  
+ digitalWrite(LED01, HIGH); // turns LED on
+ delay(1000);
+ digitalWrite(LED01, LOW); // turns LED off
+ delay(1000);
+ digitalWrite(LED02, HIGH); 
+ delay(1000);
+ digitalWrite(LED02, LOW);
+ delay(1000);
+ digitalWrite(LED03, HIGH); 
+ delay(1000);
+ digitalWrite(LED03, LOW);
+ delay(1000);
+ digitalWrite(LED04, HIGH); 
+ delay(1000);
+ digitalWrite(LED04, LOW);
+ delay(1000);
+ digitalWrite(LED03, HIGH);
+ delay(1000);
+ digitalWrite(LED03, LOW);
+ delay(1000);
+ digitalWrite(LED02, HIGH); 
+ delay(1000);
+ digitalWrite(LED02, LOW);
+ delay(1000);
+
+}
