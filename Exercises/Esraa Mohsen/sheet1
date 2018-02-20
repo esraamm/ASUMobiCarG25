@@ -1,0 +1,13 @@
+//program that produces continous pulses with duration of 2 sec and duty cycle of 25%
+int Light = 5 ;
+void setup () 
+{
+ pinMode (Light,OUTPUT);
+}
+void loop ()
+{
+ digitalWrite (Light,HIGH);
+ delay (500); 
+ digitalWrite (Light,LOW); 
+ delay (1500);
+}
